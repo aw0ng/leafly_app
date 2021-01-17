@@ -1,4 +1,5 @@
 {
+  id: @strain.id,
   name: @strain.name,
   price: @strain.price,
   image_url: @strain.image_url,

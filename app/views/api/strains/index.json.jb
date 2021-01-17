@@ -1,8 +1,9 @@
 @strains.map do |strain|
   {
-    name: Strain.name
-    price: Strain.price
-    image_url: Strain.image_url
-    description: Strain.description
+    id: strain.id,
+    name: strain.name,
+    price: strain.price,
+    image_url: strain.image_url,
+    description: strain.description
   }
 end

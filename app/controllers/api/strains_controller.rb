@@ -12,7 +12,7 @@ class Api::StrainsController < ApplicationController
       image_url: params[:image_url],
       description: params[:description]
       )
-    Strain.save
+    @strain.save
     render "show.json.jb"
   end
 
@@ -27,13 +27,13 @@ class Api::StrainsController < ApplicationController
     @strain.price = params[:price] || @strain.price
     @strain.image_url = params[:image_url] || @strain.image_url
     @strain.description = params[:description] || @strain.description
-    Strain.save
+    @strain.save
     render "show.json.jb"
   end
 
   def destroy
-    @strain = Strain.find_by(id: params[:id])
-    Strain.destroy
+    strain = Strain.find_by(id: params[:id])
+    strain.destroy
     render json: {message: "Strain successfully destroyed."}
   end
 end
